@@ -3,6 +3,7 @@ const path = require("path");
 const ClearWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
+  mode: "development",
   entry: "./src/index.js",
   output: {
     filename: "build.js",
