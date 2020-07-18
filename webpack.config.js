@@ -20,4 +20,7 @@ module.exports = {
   module: {
     rules: [{ test: /\.css$/, use: ["file-loader"] }],
   },
+  devServer: {
+    contentBase: path.resolve(__dirname, "dist"),
+  },
 };
