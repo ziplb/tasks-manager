@@ -1,5 +1,7 @@
 const path = require("path");
 
+const ClearWebpackPlugin = require("clean-webpack-plugin");
+
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -8,5 +10,6 @@ module.exports = {
   },
   module: {
     rules: [{ test: /\.css$/, use: ["file-loader"] }],
+    plugins: [new ClearWebpackPlugin()],
   },
 };
