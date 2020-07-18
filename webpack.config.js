@@ -1,6 +1,6 @@
 const path = require("path");
 
-const ClearWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -9,8 +9,8 @@ module.exports = {
     filename: "build.js",
     path: path.resolve(__dirname, "dist"),
   },
+  plugins: [new CleanWebpackPlugin()],
   module: {
     rules: [{ test: /\.css$/, use: ["file-loader"] }],
-    plugins: [new ClearWebpackPlugin()],
   },
 };
